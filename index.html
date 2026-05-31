@@ -48,6 +48,38 @@
   </div>
 </nav>
 
+  <!-- MOBILE SEARCH -->
+<div class="mobile-search" id="mobileSearchBar">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+  <input type="text" placeholder="Search products..." oninput="handleMobileSearch(this.value)" onfocus="openMobileSearchDrop()" onblur="setTimeout(closeMobileSearchDrop,200)">
+  <div class="mobile-search-drop" id="mobileSearchDrop"></div>
+</div>
+ 
+<!-- MOBILE MENU OVERLAY -->
+<div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenu()"></div>
+ 
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav class="mobile-menu-nav">
+    <a onclick="showPage('home');closeMobileMenu()" data-mpage="home" class="active">Home</a>
+    <a onclick="showPage('catalog');closeMobileMenu()" data-mpage="catalog">Shop</a>
+    <a onclick="showPage('wishlist');closeMobileMenu()" data-mpage="wishlist">
+      Wishlist <span id="mobileWishCount" style="display:none;font-family:'Jost',sans-serif;font-size:14px;color:var(--accent)"></span>
+    </a>
+    <a onclick="showPage('about');closeMobileMenu()" data-mpage="about">About</a>
+    <a onclick="showPage('contact');closeMobileMenu()" data-mpage="contact">Contact</a>
+  </nav>
+  <div class="mobile-menu-actions">
+    <a class="mobile-call-btn" href="tel:+99891539390">
+      <span style="font-size:22px">📞</span>
+      <div>
+        <div style="font-size:11px;opacity:.7;letter-spacing:.06em;text-transform:uppercase;margin-bottom:2px">Call to order</div>
+        <div style="font-size:18px;font-family:'Playfair Display',serif;font-weight:700">+998 91 539-39-0</div>
+      </div>
+    </a>
+    <div id="mobileAuthArea" style="margin-top:4px"></div>
+  </div>
+</div>
 <!-- ══════ HOME ══════ -->
 <div class="page active" id="page-home">
   <section class="hero">
