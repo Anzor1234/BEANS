@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- ══ MAIN PAGES ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#shop</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#about</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#contact</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ══ CATEGORIES ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#legumes</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#dried-fruits</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#grains</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#nuts</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#seeds</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#herbs</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#spices</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#superfoods</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ══ PRODUCTS · LEGUMES ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-1</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1600189020440-560b7ea0c3fc?w=500&amp;q=80</image:loc>
+      <image:title>Red Kidney Beans — 1 kg · BEANS Store</image:title>
+      <image:caption>Premium organic red kidney beans from Krasnodar, Russia. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-3</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500&amp;q=80</image:loc>
+      <image:title>Large Chickpeas — 1 kg · BEANS Store</image:title>
+      <image:caption>Premium Turkish chickpeas, large caliber. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-5</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=500&amp;q=80</image:loc>
+      <image:title>Green Lentils Farm Fresh — 1 kg · BEANS Store</image:title>
+      <image:caption>Organic green lentils from Altai, Russia. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-7</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1568306706818-5b0c8313d703?w=500&amp;q=80</image:loc>
+      <image:title>Split Yellow Peas — 1 kg · BEANS Store</image:title>
+      <image:caption>Split yellow peas from Voronezh, Russia. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-12</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1600189020440-560b7ea0c3fc?w=500&amp;q=80</image:loc>
+      <image:title>Black Beluga Lentils — 1 kg · BEANS Store</image:title>
+      <image:caption>Black beluga lentils from Canada. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-25</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=500&amp;q=80</image:loc>
+      <image:title>Mung Beans — 1 kg · BEANS Store</image:title>
+      <image:caption>Fresh mung beans from India. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ══ PRODUCTS · DRIED FRUITS ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-2</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=500&amp;q=80</image:loc>
+      <image:title>Natural Apricots Sulfur-Free — 1 kg · BEANS Store</image:title>
+      <image:caption>Sun-dried apricots without sulfur from Uzbekistan. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-4</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&amp;q=80</image:loc>
+      <image:title>Golden Raisins Kishmish — 1 kg · BEANS Store</image:title>
+      <image:caption>Sweet golden kishmish raisins from Afghanistan. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-6</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1612257416648-a1b0c01d9c91?w=500&amp;q=80</image:loc>
+      <image:title>Medjool Dates Premium — 1 kg · BEANS Store</image:title>
+      <image:caption>Large premium Medjool dates from Iran. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-8</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1599909631595-7b73d26aba42?w=500&amp;q=80</image:loc>
+      <image:title>Smoked Prunes Pitted — 1 kg · BEANS Store</image:title>
+      <image:caption>Traditional smoked pitted prunes from Moldova. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-16</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=500&amp;q=80</image:loc>
+      <image:title>Dried Figs Smyrna — 1 kg · BEANS Store</image:title>
+      <image:caption>Soft Smyrna dried figs from Turkey. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-20</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1612257416648-a1b0c01d9c91?w=500&amp;q=80</image:loc>
+      <image:title>Dried Mango Slices — 1 kg · BEANS Store</image:title>
+      <image:caption>Sun-dried mango slices from Philippines. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-26</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=500&amp;q=80</image:loc>
+      <image:title>Dried Cranberries — 1 kg · BEANS Store</image:title>
+      <image:caption>Tart dried cranberries from USA. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ══ PRODUCTS · GRAINS ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-10</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&amp;q=80</image:loc>
+      <image:title>Basmati Rice Extra Long — 1 kg · BEANS Store</image:title>
+      <image:caption>Aged extra-long basmati rice from India. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-15</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1586201375761-83865001e31c?w=500&amp;q=80</image:loc>
+      <image:title>White Quinoa Organic — 1 kg · BEANS Store</image:title>
+      <image:caption>Organic white quinoa from Peru. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-18</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1568306706818-5b0c8313d703?w=500&amp;q=80</image:loc>
+      <image:title>Jumbo Rolled Oats Organic — 1 kg · BEANS Store</image:title>
+      <image:caption>Scottish jumbo rolled oats, gluten-free facility. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-22</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1600189020440-560b7ea0c3fc?w=500&amp;q=80</image:loc>
+      <image:title>Amaranth Grain Organic — 1 kg · BEANS Store</image:title>
+      <image:caption>Ancient Aztec amaranth grain from Mexico. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ══ PRODUCTS · NUTS ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-9</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=500&amp;q=80</image:loc>
+      <image:title>Raw Walnut Halves Organic — 1 kg · BEANS Store</image:title>
+      <image:caption>Premium organic walnut halves from Chile. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-14</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=500&amp;q=80</image:loc>
+      <image:title>Whole Cashews W320 — 1 kg · BEANS Store</image:title>
+      <image:caption>Premium W320 cashews from Vietnam. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-23</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=500&amp;q=80</image:loc>
+      <image:title>Raw Whole Almonds California — 1 kg · BEANS Store</image:title>
+      <image:caption>California Nonpareil raw almonds. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-27</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=500&amp;q=80</image:loc>
+      <image:title>Pine Nuts Siberian — 1 kg · BEANS Store</image:title>
+      <image:caption>Wild-harvested Siberian pine nuts from Russia. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ══ PRODUCTS · SEEDS ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-11</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500&amp;q=80</image:loc>
+      <image:title>Pumpkin Seeds Pepitas — 1 kg · BEANS Store</image:title>
+      <image:caption>Raw hulled pumpkin seeds from Mexico. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-13</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=500&amp;q=80</image:loc>
+      <image:title>Chia Seeds Organic — 1 kg · BEANS Store</image:title>
+      <image:caption>Organic chia seeds from Bolivia. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-24</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=500&amp;q=80</image:loc>
+      <image:title>Golden Flaxseeds Organic — 1 kg · BEANS Store</image:title>
+      <image:caption>Organic golden flaxseeds from Canada. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-28</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=500&amp;q=80</image:loc>
+      <image:title>Sunflower Seeds Hulled Organic — 1 kg · BEANS Store</image:title>
+      <image:caption>Organic hulled sunflower seeds from Ukraine. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ══ PRODUCTS · HERBS ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-21</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500&amp;q=80</image:loc>
+      <image:title>Dried Lavender Buds Provence — 1 kg · BEANS Store</image:title>
+      <image:caption>Culinary lavender buds from Provence, France. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ══ PRODUCTS · SPICES ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-17</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500&amp;q=80</image:loc>
+      <image:title>Korean Chili Flakes Gochugaru — 1 kg · BEANS Store</image:title>
+      <image:caption>Gochugaru chili flakes from South Korea. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-29</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=500&amp;q=80</image:loc>
+      <image:title>Turmeric Powder Organic — 1 kg · BEANS Store</image:title>
+      <image:caption>High-curcumin organic turmeric from India. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- ══ PRODUCTS · SUPERFOODS ══ -->
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-19</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1599909631595-7b73d26aba42?w=500&amp;q=80</image:loc>
+      <image:title>Goji Berries Organic Ningxia — 1 kg · BEANS Store</image:title>
+      <image:caption>Organic Ningxia goji berries from China. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://anzor1234.github.io/BEANS/#product-30</loc>
+    <lastmod>2025-05-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.70</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1599909631595-7b73d26aba42?w=500&amp;q=80</image:loc>
+      <image:title>Moringa Leaf Powder Organic — 1 kg · BEANS Store</image:title>
+      <image:caption>Organic moringa leaf powder from Ghana. Sold per 1 kg.</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

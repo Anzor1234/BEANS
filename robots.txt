@@ -1,0 +1,58 @@
+# =============================================
+# robots.txt — BEANS Premium Dry Goods
+# https://anzor1234.github.io/BEANS/
+# Last updated: 2025-05-31
+# =============================================
+
+# ── Allow all well-behaved crawlers ──
+User-agent: *
+Allow: /BEANS/
+Disallow: /BEANS/wishlist
+Disallow: /BEANS/admin/
+Disallow: /BEANS/api/
+
+# ── Google ──
+User-agent: Googlebot
+Allow: /BEANS/
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /BEANS/
+
+# ── Bing ──
+User-agent: Bingbot
+Allow: /BEANS/
+Crawl-delay: 2
+
+# ── Yandex ──
+User-agent: YandexBot
+Allow: /BEANS/
+Crawl-delay: 2
+
+# ── Block AI training scrapers ──
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+# ── Sitemap ──
+Sitemap: https://anzor1234.github.io/BEANS/sitemap.xml
