@@ -603,12 +603,7 @@ function showPage(id){
   if(id==='wishlist') renderWishlist();
 }
  
-// Patch updateAuthUI to also refresh mobile
-const _origUpdateAuthUI = updateAuthUI;
-function updateAuthUI(){
-  _origUpdateAuthUI();
-  updateMobileAuthArea();
-}
+
  
 // Patch updateWishBadge to also refresh mobile count
 const _origUpdateWishBadge = updateWishBadge;
