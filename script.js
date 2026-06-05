@@ -416,16 +416,20 @@ function resendCode(){ showToast('Code resent!'); startTimer(); }
  
 function otpNext(inp,i){
   inp.value = inp.value.replace(/\D/g,'');
-  if(inp.value && i<3) document.getElementById('otp'+(i+1)).focus();
-  if(i===3 && inp.value) setTimeout(verifyCode,300);
+  if(inp.value && i<5) document.getElementById('otp'+(i+1)).focus();
+  if(i===5 && inp.value) setTimeout(verifyCode,300);
 }
 function otpBack(e,i){ if(e.key==='Backspace'&&!e.target.value&&i>0) document.getElementById('otp'+(i-1)).focus(); }
  
 function verifyCode(){
-  const code = [0,1,2,3].map(i=>document.getElementById('otp'+i).value).join('');
-  if(code.length<4){ showToast('Enter all 4 digits'); return; }
-  if(!user) goAStep('s-name');
-  else loginSuccess();
+ const code = [0,1,2,3,4,5]
+  .map(i=>document.getElementById('otp'+i).value)
+  .join('');
+
+if(code.length < 6){
+  showToast('Enter all 6 digits');
+  return;
+}
 }
  
 function completeAuth(){
