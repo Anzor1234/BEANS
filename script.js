@@ -309,7 +309,10 @@ function toggleWish(id, event, fromDetail=false){
   // refresh wishlist page if open
   if(document.getElementById('page-wishlist').classList.contains('active')) renderWishlist();
 }
- 
+ localStorage.setItem(
+  'wishlist',
+  JSON.stringify([...wishlist])
+);
 function updateWishBadge(){
   const b = document.getElementById('wishBadge');
   b.style.display = wishlist.size > 0 ? 'flex' : 'none';
@@ -423,13 +426,15 @@ function otpBack(e,i){ if(e.key==='Backspace'&&!e.target.value&&i>0) document.ge
  
 function verifyCode(){
  const code = [0,1,2,3,4,5]
-  .map(i=>document.getElementById('otp'+i).value)
+  .map(i => document.getElementById('otp'+i).value)
   .join('');
 
-if(code.length < 6){
-  showToast('Enter all 6 digits');
-  return;
-}
+ if(code.length < 6){
+   showToast('Enter all 6 digits');
+   return;
+ }
+
+ goAStep('s-name');
 }
  
 function completeAuth(){
