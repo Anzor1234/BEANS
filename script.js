@@ -632,7 +632,7 @@ updateMobileAuthArea();
 // DYNAMIC SEO
 // ═══════════════════════════════════
 const BASE_TITLE = 'BEANS — Premium Dry Goods | Legumes, Dried Fruits, Nuts & Grains';
-const BASE_DESC  = 'BEANS is a premium dry goods marketplace. Buy organic legumes, dried fruits, nuts, grains and seeds. Sold per 1 kg. Call +998 91 539-39-0 for prices.';
+const BASE_DESC  = 'BEANS is a premium dry goods marketplace. Buy organic legumes, dried fruits, nuts, grains and seeds. Sold per 1 kg. Call +998-91-530-93-90 for prices.';
 const BASE_URL   = 'https://anzor1234.github.io/BEANS/';
 const BASE_IMG   = 'https://images.unsplash.com/photo-1515543904379-3d757abe528f?w=1200&q=80';
 
@@ -664,14 +664,14 @@ function showPage(id){
     const cat = activeCat!=='all' ? CAT[activeCat] : null;
     setMeta(
       cat ? `Buy ${cat} — 1 kg | BEANS Store` : 'Shop All Dry Goods | BEANS Store',
-      cat ? `Browse organic ${cat.toLowerCase()} sold per 1 kg. Call +998 91 539-39-0 for price.`
+      cat ? `Browse organic ${cat.toLowerCase()} sold per 1 kg. Call +998-91-530-93-90 for price.`
           : 'Browse 400+ dry goods: legumes, fruits, nuts, grains. All per 1 kg.',
       BASE_URL+'#shop'
     );
   } else if(id==='about'){
-    setMeta('About BEANS — Our Story','BEANS — premium dry goods from trusted farms worldwide. 400+ products, 90+ suppliers.',BASE_URL+'#about');
+    setMeta('About BEANS — Our Story','BEANS — premium dry goods from trusted farms worldwide. 400+ products.',BASE_URL+'#about');
   } else if(id==='contact'){
-    setMeta('Contact BEANS — +998 91 539-39-0','Call us for prices and orders. Mon–Sat 9am–7pm.',BASE_URL+'#contact');
+    setMeta('Contact BEANS — +998-91-530-93-90','Call us for prices and orders. 12/7.',BASE_URL+'#contact');
   }
 }
 
@@ -683,7 +683,7 @@ function openProduct(id){
   const catName = CATEGORIES.find(c=>c.id===p.cat)?.name || p.cat;
   setMeta(
     `${p.name} — ${catName} · 1 kg | BEANS Store`,
-    `${p.name} from ${p.origin}. ${p.desc?p.desc.slice(0,120)+'...':''} Sold per 1 kg. Call: +998 91 539-39-0.`,
+    `${p.name} from ${p.origin}. ${p.desc?p.desc.slice(0,120)+'...':''} Sold per 1 kg. Call: +998-91-530-93-90.`,
     `${BASE_URL}#product-${p.id}`,
     p.img
   );
@@ -696,7 +696,7 @@ function openProduct(id){
     "offers":{"@type":"Offer","priceCurrency":"USD",
       "availability":p.inStock?"https://schema.org/InStock":"https://schema.org/OutOfStock",
       "url":BASE_URL+'#product-'+p.id,
-      "seller":{"@type":"Organization","name":"BEANS Store","telephone":"+998-91-539-39-0"}
+      "seller":{"@type":"Organization","name":"BEANS Store","telephone":"+998-91-530-93-90"}
     },
     "aggregateRating":{"@type":"AggregateRating","ratingValue":p.rating,"reviewCount":p.reviews,"bestRating":"5","worstRating":"1"},
     "nutrition":{"@type":"NutritionInformation","servingSize":"100g","proteinContent":p.protein||"","fiberContent":p.fiber||""}
