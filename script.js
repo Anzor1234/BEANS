@@ -628,3 +628,77 @@ function updateWishBadge(){
 initHome();
 renderCountryList();
 updateMobileAuthArea();
+// ═══════════════════════════════════
+// DYNAMIC SEO
+// ═══════════════════════════════════
+const BASE_TITLE = 'BEANS — Premium Dry Goods | Legumes, Dried Fruits, Nuts & Grains';
+const BASE_DESC  = 'BEANS is a premium dry goods marketplace. Buy organic legumes, dried fruits, nuts, grains and seeds. Sold per 1 kg. Call +998 91 539-39-0 for prices.';
+const BASE_URL   = 'https://anzor1234.github.io/BEANS/';
+const BASE_IMG   = 'https://images.unsplash.com/photo-1515543904379-3d757abe528f?w=1200&q=80';
+
+function setMeta(title, desc, url, img){
+  document.title = title;
+  setTag('meta[name="description"]',        'content', desc);
+  setTag('meta[property="og:title"]',       'content', title);
+  setTag('meta[property="og:description"]', 'content', desc);
+  setTag('meta[property="og:url"]',         'content', url || BASE_URL);
+  setTag('meta[property="og:image"]',       'content', img || BASE_IMG);
+  setTag('meta[name="twitter:title"]',      'content', title);
+  setTag('meta[name="twitter:description"]','content', desc);
+  setTag('meta[name="twitter:image"]',      'content', img || BASE_IMG);
+  const can = document.querySelector('link[rel="canonical"]');
+  if(can) can.href = url || BASE_URL;
+}
+function setTag(sel, attr, val){
+  const el = document.querySelector(sel);
+  if(el) el.setAttribute(attr, val);
+}
+
+const __showPage = showPage;
+function showPage(id){
+  __showPage(id);
+  if(id==='home'){
+    setMeta(BASE_TITLE, BASE_DESC, BASE_URL, BASE_IMG);
+  } else if(id==='catalog'){
+    const CAT={'legumes':'Legumes','dried-fruits':'Dried Fruits','grains':'Grains','nuts':'Nuts','seeds':'Seeds','herbs':'Herbs','spices':'Spices','superfoods':'Superfoods'};
+    const cat = activeCat!=='all' ? CAT[activeCat] : null;
+    setMeta(
+      cat ? `Buy ${cat} — 1 kg | BEANS Store` : 'Shop All Dry Goods | BEANS Store',
+      cat ? `Browse organic ${cat.toLowerCase()} sold per 1 kg. Call +998 91 539-39-0 for price.`
+          : 'Browse 400+ dry goods: legumes, fruits, nuts, grains. All per 1 kg.',
+      BASE_URL+'#shop'
+    );
+  } else if(id==='about'){
+    setMeta('About BEANS — Our Story','BEANS — premium dry goods from trusted farms worldwide. 400+ products, 90+ suppliers.',BASE_URL+'#about');
+  } else if(id==='contact'){
+    setMeta('Contact BEANS — +998 91 539-39-0','Call us for prices and orders. Mon–Sat 9am–7pm.',BASE_URL+'#contact');
+  }
+}
+
+const __openProduct = openProduct;
+function openProduct(id){
+  __openProduct(id);
+  const p = PRODUCTS.find(x=>x.id===id);
+  if(!p) return;
+  const catName = CATEGORIES.find(c=>c.id===p.cat)?.name || p.cat;
+  setMeta(
+    `${p.name} — ${catName} · 1 kg | BEANS Store`,
+    `${p.name} from ${p.origin}. ${p.desc?p.desc.slice(0,120)+'...':''} Sold per 1 kg. Call: +998 91 539-39-0.`,
+    `${BASE_URL}#product-${p.id}`,
+    p.img
+  );
+  let sc = document.getElementById('dynamic-product-schema');
+  if(!sc){ sc=document.createElement('script'); sc.type='application/ld+json'; sc.id='dynamic-product-schema'; document.head.appendChild(sc); }
+  sc.textContent = JSON.stringify({
+    "@context":"https://schema.org","@type":"Product",
+    "name":p.name,"image":p.img,"description":p.desc||p.name,
+    "brand":{"@type":"Brand","name":"BEANS Store"},
+    "offers":{"@type":"Offer","priceCurrency":"USD",
+      "availability":p.inStock?"https://schema.org/InStock":"https://schema.org/OutOfStock",
+      "url":BASE_URL+'#product-'+p.id,
+      "seller":{"@type":"Organization","name":"BEANS Store","telephone":"+998-91-539-39-0"}
+    },
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":p.rating,"reviewCount":p.reviews,"bestRating":"5","worstRating":"1"},
+    "nutrition":{"@type":"NutritionInformation","servingSize":"100g","proteinContent":p.protein||"","fiberContent":p.fiber||""}
+  });
+}
