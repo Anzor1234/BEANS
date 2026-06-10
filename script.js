@@ -92,7 +92,9 @@ const PHONE_FORMATS = {
 function getPhoneFmt(code){return PHONE_FORMATS[code]||[12,v=>v,'000 000 0000'];}
 
 // ─── STATE ───
-let wishlist = new Set();
+let wishlist = new Set(
+  JSON.parse(localStorage.getItem('wishlist') || '[]')
+);
 let user = null;
 let selectedCountry = COUNTRIES[0];
 let activeFilter = 'all';
