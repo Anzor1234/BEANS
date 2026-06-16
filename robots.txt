@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://anzor1234.github.io/BEANS/sitemap.xml
+Sitemap: https://beansmarket.uz/sitemap.xml
