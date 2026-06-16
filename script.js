@@ -12,15 +12,22 @@ const CATEGORIES = [
   {id:'superfoods',icon:'✨',name:'Superfoods',  count:22},
 ];
 
-let PRODUCTS = [
-async function loadProducts() {
-  PRODUCTS = await fetch("products.json")
-    .then(r => r.json());
+let PRODUCTS = [];
 
-  renderCatalog();
+async function loadProducts() {
+  try {
+    PRODUCTS = await fetch("./products.json")
+      .then(r => r.json());
+
+    initHome();
+    renderCatalog();
+
+  } catch(err) {
+    console.error("Ошибка загрузки products.json:", err);
+  }
 }
-];
-loadProducts();
+
+await loadProducts();
 
 const COUNTRIES = [
   {flag:'🇺🇸',name:'United States',code:'+1'},{flag:'🇬🇧',name:'United Kingdom',code:'+44'},
