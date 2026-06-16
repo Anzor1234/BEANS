@@ -14,20 +14,20 @@ const CATEGORIES = [
 
 let PRODUCTS = [];
 
-//async function loadProducts() {
-//  try {
-//    PRODUCTS = await fetch("./products.json")
-//      .then(r => r.json());
+async function loadProducts() {
+ try {
+   PRODUCTS = await fetch("./products.json")
+     .then(r => r.json());
 
- //   initHome();
-//    renderCatalog();
+   initHome();
+   renderCatalog();
 
-//  } catch(err) {
-//    console.error("Ошибка загрузки products.json:", err);
-//  }
-//}
+ } catch(err) {
+   console.error("Ошибка загрузки products.json:", err);
+ }
+}
 
-//await loadProducts();
+loadProducts();
 async function loadProducts() {
     const response = await fetch("./products.json");
     PRODUCTS = await response.json();
