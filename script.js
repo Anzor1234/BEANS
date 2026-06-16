@@ -14,21 +14,29 @@ const CATEGORIES = [
 
 let PRODUCTS = [];
 
+//async function loadProducts() {
+//  try {
+//    PRODUCTS = await fetch("./products.json")
+//      .then(r => r.json());
+
+ //   initHome();
+//    renderCatalog();
+
+//  } catch(err) {
+//    console.error("Ошибка загрузки products.json:", err);
+//  }
+//}
+
+//await loadProducts();
 async function loadProducts() {
-  try {
-    PRODUCTS = await fetch("./products.json")
-      .then(r => r.json());
+    const response = await fetch("./products.json");
+    PRODUCTS = await response.json();
 
     initHome();
     renderCatalog();
-
-  } catch(err) {
-    console.error("Ошибка загрузки products.json:", err);
-  }
 }
 
-await loadProducts();
-
+loadProducts();
 const COUNTRIES = [
   {flag:'🇺🇸',name:'United States',code:'+1'},{flag:'🇬🇧',name:'United Kingdom',code:'+44'},
   {flag:'🇩🇪',name:'Germany',code:'+49'},{flag:'🇫🇷',name:'France',code:'+33'},
