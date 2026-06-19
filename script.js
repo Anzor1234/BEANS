@@ -576,7 +576,7 @@ function showToast(msg){
 // Patch showPage to also update mobile nav
 const _origShowPage = showPage;
 // redefine to also update mobile nav links
-function originalshowPage(id){
+function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   document.querySelectorAll('.nav-links a').forEach(a=>{
@@ -590,7 +590,6 @@ function originalshowPage(id){
   if(id==='catalog') renderCatalog();
   if(id==='wishlist') renderWishlist();
 }
- 
 
  
 // Patch updateWishBadge to also refresh mobile count
