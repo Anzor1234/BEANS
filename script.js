@@ -633,7 +633,7 @@ function setTag(sel, attr, val){
 }
 
 function showPage(id){
-  originalShowPage(id);
+  originalshowPage(id);
 
   if(id==='home'){
     setMeta(BASE_TITLE, BASE_DESC, BASE_URL, BASE_IMG);
