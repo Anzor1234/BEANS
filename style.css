@@ -466,3 +466,25 @@ footer{background:var(--ink);color:#9a9080;padding:56px 52px 36px;border-top:1px
   .pc-wish{opacity:1}
   .qb{min-width:40px;min-height:40px}
 }
+/* ── LANGUAGE SWITCHER ── */
+.lang-wrap{position:relative}
+.lang-btn{display:flex;align-items:center;gap:5px;padding:0 10px;height:36px;background:var(--paper2);border:1px solid var(--paper3);cursor:pointer;font-family:'Jost',sans-serif;font-size:12px;color:var(--ink2);transition:border-color .15s;white-space:nowrap}
+.lang-btn:hover{border-color:var(--accent);color:var(--accent)}
+.lang-drop{position:absolute;top:calc(100% + 6px);right:0;background:var(--paper);border:1px solid var(--paper3);box-shadow:0 8px 32px rgba(24,20,14,.12);z-index:600;display:none;min-width:180px;max-height:320px;overflow-y:auto}
+.lang-drop.open{display:block}
+.lang-opt{display:flex;align-items:center;gap:10px;padding:9px 14px;cursor:pointer;font-size:13px;transition:background .1s;font-family:'Jost',sans-serif}
+.lang-opt:hover{background:var(--paper2)}
+.lang-opt.active-lang{background:var(--acl);color:var(--accent)}
+.lang-flag{font-size:18px;flex-shrink:0}
+.lang-name{flex:1;font-size:13px}
+.lang-native{font-size:11px;color:var(--ink3)}
+
+/* RTL support for Arabic */
+[dir="rtl"]{direction:rtl;text-align:right}
+[dir="rtl"] .nav-links{flex-direction:row-reverse}
+[dir="rtl"] .hero-eyebrow::before{display:none}
+[dir="rtl"] .contact-bar{flex-direction:row-reverse}
+
+@media(max-width:900px){
+  .lang-wrap{display:none} /* hidden on mobile — shown inside mobile menu */
+}
