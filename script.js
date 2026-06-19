@@ -576,7 +576,7 @@ function showToast(msg){
 // Patch showPage to also update mobile nav
 const _origShowPage = showPage;
 // redefine to also update mobile nav links
-function showPage(id){
+function originalshowPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   document.querySelectorAll('.nav-links a').forEach(a=>{
@@ -633,24 +633,49 @@ function setTag(sel, attr, val){
   if(el) el.setAttribute(attr, val);
 }
 
-const __showPage = showPage;
 function showPage(id){
-  __showPage(id);
+  originalShowPage(id);
+
   if(id==='home'){
     setMeta(BASE_TITLE, BASE_DESC, BASE_URL, BASE_IMG);
+
   } else if(id==='catalog'){
-    const CAT={'legumes':'Legumes','dried-fruits':'Dried Fruits','grains':'Grains','nuts':'Nuts','seeds':'Seeds','herbs':'Herbs','spices':'Spices','superfoods':'Superfoods'};
-    const cat = activeCat!=='all' ? CAT[activeCat] : null;
+    const CAT = {
+      'legumes':'Legumes',
+      'dried-fruits':'Dried Fruits',
+      'grains':'Grains',
+      'nuts':'Nuts',
+      'seeds':'Seeds',
+      'herbs':'Herbs',
+      'spices':'Spices',
+      'superfoods':'Superfoods'
+    };
+
+    const cat = activeCat !== 'all' ? CAT[activeCat] : null;
+
     setMeta(
-      cat ? `Buy ${cat} — 1 kg | BEANS Store` : 'Shop All Dry Goods | BEANS Store',
-      cat ? `Browse organic ${cat.toLowerCase()} sold per 1 kg. Call +998-91-530-93-90 for price.`
-          : 'Browse 400+ dry goods: legumes, fruits, nuts, grains. All per 1 kg.',
-      BASE_URL+'#shop'
+      cat
+        ? `Buy ${cat} — 1 kg | BEANS Store`
+        : 'Shop All Dry Goods | BEANS Store',
+      cat
+        ? `Browse organic ${cat.toLowerCase()} sold per 1 kg. Call +998-91-530-93-90 for price.`
+        : 'Browse 400+ dry goods: legumes, fruits, nuts, grains. All per 1 kg.',
+      BASE_URL + '#shop'
     );
+
   } else if(id==='about'){
-    setMeta('About BEANS — Our Story','BEANS — premium dry goods from trusted farms worldwide. 400+ products.',BASE_URL+'#about');
+    setMeta(
+      'About BEANS — Our Story',
+      'BEANS — premium dry goods from trusted farms worldwide. 400+ products.',
+      BASE_URL + '#about'
+    );
+
   } else if(id==='contact'){
-    setMeta('Contact BEANS — +998-91-530-93-90','Call us for prices and orders. 12/7.',BASE_URL+'#contact');
+    setMeta(
+      'Contact BEANS — +998-91-530-93-90',
+      'Call us for prices and orders. 12/7.',
+      BASE_URL + '#contact'
+    );
   }
 }
 
