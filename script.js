@@ -576,7 +576,7 @@ function showToast(msg){
 // Patch showPage to also update mobile nav
 const _origShowPage = showPage;
 // redefine to also update mobile nav links
-function showPage(id){
+function originalshowPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.getElementById('page-'+id).classList.add('active');
   document.querySelectorAll('.nav-links a').forEach(a=>{
