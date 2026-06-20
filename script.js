@@ -1261,13 +1261,6 @@ function productCard(p){
   </div>`;
 }
 //call to order
-import {
- collection,
- addDoc,
- serverTimestamp
-}
-from
-"https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 async function saveOrder(phone, product){
 
