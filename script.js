@@ -374,15 +374,42 @@ function fmtPhone(inp){
 }
  
 let resendIv;
-function sendCode(){
-  const ph = document.getElementById('phoneInput').value.replace(/\D/g,'');
-  if(ph.length < 6){ showToast('Please enter a valid phone number'); return; }
-  document.getElementById('phoneMask').textContent = selectedCountry.code+' '+document.getElementById('phoneInput').value;
+async function sendCode(){
+
+  const phone =
+    selectedCountry.code +
+    document.getElementById('phoneInput')
+      .value.replace(/\D/g,'');
+
+  const code =
+    Math.floor(
+      100000 + Math.random()*900000
+    ).toString();
+
+  await setDoc(
+    doc(window.db, "otp", phone),
+    {
+      code: code,
+      createdAt: Date.now()
+    }
+  );
+
+  await fetch(
+    "https://project-f49yx.vercel.app/api/send-code",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type":"application/json"
+      },
+      body: JSON.stringify({
+        phone,
+        code
+      })
+    }
+  );
+
   goAStep('s-otp');
-  document.getElementById('otp0').focus();
-  startTimer();
 }
- 
 function startTimer(){
   let sec = 60;
   document.getElementById('resendT').style.display='block';
