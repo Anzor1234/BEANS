@@ -1301,3 +1301,16 @@ async function saveOrder(phone, product){
  );
 
 }
+const snap =
+await getDoc(
+ doc(window.db,"otp",phone)
+);
+
+const saved =
+snap.data().code;
+
+if(code===saved){
+  completeAuth();
+}else{
+  showToast("Wrong code");
+}
