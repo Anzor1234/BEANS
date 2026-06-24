@@ -90,6 +90,9 @@ function showPage(id){
   window.scrollTo({top:0,behavior:'smooth'});
   if(id==='catalog') renderCatalog();
   if(id==='wishlist') renderWishlist();
+  if(id==='home') renderHome()
+  if(id==='about') renderAbout()
+  if(id==='contact') renderContact()
 }
  
 // ═══════════════════════════════════
