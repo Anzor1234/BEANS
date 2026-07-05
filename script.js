@@ -1315,4 +1315,4 @@ async function snapcode() {
     showToast("Wrong code");
   }
 }
-snapcode()
+
