@@ -20,7 +20,10 @@ async function loadProducts() {
     initHome();
     renderCatalog();
 }
-
+const BASE_TITLE = 'BEANS — Premium Dry Goods | Legumes, Dried Fruits, Nuts & Grains';
+const BASE_DESC  = 'BEANS is a premium dry goods marketplace. Buy organic legumes, dried fruits, nuts, grains and seeds. Sold per 1 kg. Call +998-91-530-93-90 for prices.';
+const BASE_URL   = 'https://anzor1234.github.io/BEANS/';
+const BASE_IMG   = 'https://images.unsplash.com/photo-1515543904379-3d757abe528f?w=1200&q=80';
 const COUNTRIES = [
   {flag:'🇺🇸',name:'United States',code:'+1'},{flag:'🇬🇧',name:'United Kingdom',code:'+44'},
   {flag:'🇩🇪',name:'Germany',code:'+49'},{flag:'🇫🇷',name:'France',code:'+33'},
@@ -637,10 +640,7 @@ updateMobileAuthArea();
 // ═══════════════════════════════════
 // DYNAMIC SEO
 // ═══════════════════════════════════
-const BASE_TITLE = 'BEANS — Premium Dry Goods | Legumes, Dried Fruits, Nuts & Grains';
-const BASE_DESC  = 'BEANS is a premium dry goods marketplace. Buy organic legumes, dried fruits, nuts, grains and seeds. Sold per 1 kg. Call +998-91-530-93-90 for prices.';
-const BASE_URL   = 'https://anzor1234.github.io/BEANS/';
-const BASE_IMG   = 'https://images.unsplash.com/photo-1515543904379-3d757abe528f?w=1200&q=80';
+
 
 function setMeta(title, desc, url, img){
   document.title = title;
