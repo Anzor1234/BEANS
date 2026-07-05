@@ -514,9 +514,15 @@ function updateWishBadge(){
   }
 }
  
-initHome();
-renderCountryList();
-updateMobileAuthArea();
+document.addEventListener("DOMContentLoaded", async () => {
+    await loadProducts();
+
+    updateWishBadge();
+
+    if (typeof applyTranslations === "function") {
+        applyTranslations();
+    }
+});
 // ═══════════════════════════════════
 // DYNAMIC SEO
 // ═══════════════════════════════════
