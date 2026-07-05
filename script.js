@@ -20,7 +20,51 @@ async function loadProducts() {
     initHome();
     renderCatalog();
 }
+const COUNTRIES = [
+  {flag:'🇺🇸',name:'United States',code:'+1'},{flag:'🇬🇧',name:'United Kingdom',code:'+44'},
+  {flag:'🇩🇪',name:'Germany',code:'+49'},{flag:'🇫🇷',name:'France',code:'+33'},
+  {flag:'🇮🇳',name:'India',code:'+91'},{flag:'🇨🇳',name:'China',code:'+86'},
+  {flag:'🇯🇵',name:'Japan',code:'+81'},{flag:'🇰🇷',name:'South Korea',code:'+82'},
+  {flag:'🇷🇺',name:'Russia',code:'+7'},{flag:'🇺🇿',name:'Uzbekistan',code:'+998'},
+  {flag:'🇹🇷',name:'Turkey',code:'+90'},{flag:'🇮🇷',name:'Iran',code:'+98'},
+  {flag:'🇦🇺',name:'Australia',code:'+61'},{flag:'🇨🇦',name:'Canada',code:'+1'},
+  {flag:'🇧🇷',name:'Brazil',code:'+55'},{flag:'🇲🇽',name:'Mexico',code:'+52'},
+  {flag:'🇿🇦',name:'South Africa',code:'+27'},{flag:'🇳🇬',name:'Nigeria',code:'+234'},
+  {flag:'🇪🇬',name:'Egypt',code:'+20'},{flag:'🇸🇦',name:'Saudi Arabia',code:'+966'},
+  {flag:'🇦🇪',name:'UAE',code:'+971'},{flag:'🇵🇰',name:'Pakistan',code:'+92'},
+  {flag:'🇧🇩',name:'Bangladesh',code:'+880'},{flag:'🇮🇩',name:'Indonesia',code:'+62'},
+  {flag:'🇵🇭',name:'Philippines',code:'+63'},{flag:'🇻🇳',name:'Vietnam',code:'+84'},
+  {flag:'🇹🇭',name:'Thailand',code:'+66'},{flag:'🇮🇹',name:'Italy',code:'+39'},
+  {flag:'🇪🇸',name:'Spain',code:'+34'},{flag:'🇵🇱',name:'Poland',code:'+48'},
+  {flag:'🇳🇱',name:'Netherlands',code:'+31'},{flag:'🇸🇪',name:'Sweden',code:'+46'},
+  {flag:'🇦🇷',name:'Argentina',code:'+54'},{flag:'🇺🇦',name:'Ukraine',code:'+380'},
+  {flag:'🇰🇿',name:'Kazakhstan',code:'+7'},{flag:'🇦🇿',name:'Azerbaijan',code:'+994'},
+  {flag:'🇬🇪',name:'Georgia',code:'+995'},{flag:'🇦🇲',name:'Armenia',code:'+374'},
+];
 
+const PHONE_FORMATS = {
+  '+1':  [10,v=>{let f='';if(v.length>0)f='('+v.slice(0,3);if(v.length>=4)f+=') '+v.slice(3,6);if(v.length>=7)f+='-'+v.slice(6,8);if(v.length>=9)f+='-'+v.slice(8,10);return f;},'(555) 000-0000'],
+  '+44': [10,v=>{let f='';if(v.length>0)f=v.slice(0,4);if(v.length>=5)f+=' '+v.slice(4,7);if(v.length>=8)f+=' '+v.slice(7,10);return f;},'7700 900000'],
+  '+49': [11,v=>{let f='';if(v.length>0)f=v.slice(0,3);if(v.length>=4)f+=' '+v.slice(3,7);if(v.length>=8)f+=' '+v.slice(7,11);return f;},'151 12345678'],
+  '+33': [9, v=>{let f='';for(let i=0;i<v.length;i+=2){if(i>0)f+=' ';f+=v.slice(i,i+2);}return f;},'06 12 34 56 78'],
+  '+91': [10,v=>{let f='';if(v.length>0)f=v.slice(0,5);if(v.length>=6)f+=' '+v.slice(5,10);return f;},'98765 43210'],
+  '+86': [11,v=>{let f='';if(v.length>0)f=v.slice(0,3);if(v.length>=4)f+=' '+v.slice(3,7);if(v.length>=8)f+=' '+v.slice(7,11);return f;},'131 2345 6789'],
+  '+81': [11,v=>{let f='';if(v.length>0)f=v.slice(0,2);if(v.length>=3)f+='-'+v.slice(2,6);if(v.length>=7)f+='-'+v.slice(6,11);return f;},'90-1234-5678'],
+  '+82': [10,v=>{let f='';if(v.length>0)f=v.slice(0,3);if(v.length>=4)f+='-'+v.slice(3,7);if(v.length>=8)f+='-'+v.slice(7,10);return f;},'010-1234-5678'],
+  '+7':  [10,v=>{let f='';if(v.length>0)f='('+v.slice(0,3);if(v.length>=4)f+=') '+v.slice(3,6);if(v.length>=7)f+='-'+v.slice(6,8);if(v.length>=9)f+='-'+v.slice(8,10);return f;},'(999) 123-45-67'],
+  '+998':[9, v=>{let f='';if(v.length>0)f=v.slice(0,2);if(v.length>=3)f+=' '+v.slice(2,5);if(v.length>=6)f+=' '+v.slice(5,7);if(v.length>=8)f+=' '+v.slice(7,9);return f;},'90 123 45 67'],
+  '+90': [10,v=>{let f='';if(v.length>0)f='('+v.slice(0,3);if(v.length>=4)f+=') '+v.slice(3,6);if(v.length>=7)f+='-'+v.slice(6,8);if(v.length>=9)f+='-'+v.slice(8,10);return f;},'(532) 123-4567'],
+  '+98': [10,v=>{let f='';if(v.length>0)f=v.slice(0,3);if(v.length>=4)f+=' '+v.slice(3,7);if(v.length>=8)f+=' '+v.slice(7,10);return f;},'912 345 6789'],
+  '+61': [9, v=>{let f='';if(v.length>0)f=v.slice(0,3);if(v.length>=4)f+=' '+v.slice(3,6);if(v.length>=7)f+=' '+v.slice(6,9);return f;},'412 345 678'],
+  '+55': [11,v=>{let f='';if(v.length>0)f='('+v.slice(0,2);if(v.length>=3)f+=') '+v.slice(2,7);if(v.length>=8)f+='-'+v.slice(7,11);return f;},'(11) 91234-5678'],
+  '+966':[9, v=>{let f='';if(v.length>0)f=v.slice(0,2);if(v.length>=3)f+=' '+v.slice(2,5);if(v.length>=6)f+=' '+v.slice(5,9);return f;},'50 123 4567'],
+  '+971':[9, v=>{let f='';if(v.length>0)f=v.slice(0,2);if(v.length>=3)f+=' '+v.slice(2,5);if(v.length>=6)f+=' '+v.slice(5,9);return f;},'50 123 4567'],
+  '+380':[9, v=>{let f='';if(v.length>0)f=v.slice(0,2);if(v.length>=3)f+=' '+v.slice(2,5);if(v.length>=6)f+=' '+v.slice(5,7);if(v.length>=8)f+=' '+v.slice(7,9);return f;},'50 123 45 67'],
+  '+994':[9, v=>{let f='';if(v.length>0)f=v.slice(0,2);if(v.length>=3)f+=' '+v.slice(2,5);if(v.length>=6)f+=' '+v.slice(5,7);if(v.length>=8)f+=' '+v.slice(7,9);return f;},'50 123 45 67'],
+  '+995':[9, v=>{let f='';if(v.length>0)f=v.slice(0,3);if(v.length>=4)f+=' '+v.slice(3,6);if(v.length>=7)f+=' '+v.slice(6,9);return f;},'555 12 34 56'],
+  '+374':[8, v=>{let f='';if(v.length>0)f=v.slice(0,2);if(v.length>=3)f+=' '+v.slice(2,5);if(v.length>=6)f+=' '+v.slice(5,8);return f;},'77 123 456'],
+};
+function getPhoneFmt(code){return PHONE_FORMATS[code]||[12,v=>v,'000 000 0000'];}
 // ─── STATE ───
 let wishlist = new Set(
   JSON.parse(localStorage.getItem('wishlist') || '[]')
