@@ -20,7 +20,7 @@ async function loadProducts() {
     initHome();
     renderCatalog();
 }
-loadProducts();
+
 const COUNTRIES = [
   {flag:'🇺🇸',name:'United States',code:'+1'},{flag:'🇬🇧',name:'United Kingdom',code:'+44'},
   {flag:'🇩🇪',name:'Germany',code:'+49'},{flag:'🇫🇷',name:'France',code:'+33'},
@@ -1288,6 +1288,7 @@ function productCard(p){
     </div>
   </div>`;
 }
+loadProducts();
 //call to order
 
 async function saveOrder(phone, product){
